@@ -10,7 +10,7 @@
 {{ $img := (replace $id $ext $extSize) }}
 
 {{ $space := "me-3" }}
-{{ if (eq $align "float-right") }}{{ $space = "ms-3" }}{{ end }}
+{{ if (eq $align "float-end") }}{{ $space = "ms-3" }}{{ end }}
 {{ if (eq $align "float-center") }}{{ $align = "text-center" }}{{ end }}
 
 <div class="shortcode shortcode-{{ .Name }} {{ $align }} {{ $space }}">
