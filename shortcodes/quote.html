@@ -1,8 +1,10 @@
 <div class="shortcode shortcode-{{ .Name }}">
-  <blockquote class="blockquote">
-    {{ with .Inner }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
+  <figure>
+    <blockquote class="blockquote">
+      {{ with .Inner }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
+    </blockquote>
     {{ with .Get "author" }}
-    <footer class="blockquote-footer">{{ . | $.Page.RenderString }}</footer>
+    <figcaption class="blockquote-footer">{{ . | $.Page.RenderString }}</figcaption>
     {{ end }}
-  </blockquote>
+  </figure>
 </div>
